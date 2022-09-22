@@ -1,0 +1,11 @@
+Library/*
+ProjectSettings/*
+obj/*
+.vs/*
+Packages/*
+UserSettings/*
+Logs/*
+*.sln
+Assembly-CSharp.csproj
+.vsconfig
+.gitattributes
