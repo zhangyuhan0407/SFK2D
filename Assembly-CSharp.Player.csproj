@@ -55,13 +55,15 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/HKPlayerController.cs" />
-    <Compile Include="Assets/HKHookController.cs" />
-    <Compile Include="Assets/MRWallController.cs" />
-    <Compile Include="Assets/SFKTriggerController.cs" />
-    <Compile Include="Assets/SFKBoss2Controller.cs" />
-    <Compile Include="Assets/SFKSkill.cs" />
-    <Compile Include="Assets/SFKBoss2BulletController.cs" />
+    <Compile Include="Assets/Scripts/Boss2/SFKBoss2Controller_Handler.cs" />
+    <Compile Include="Assets/Scripts/Player/SFKPlayerController.cs" />
+    <Compile Include="Assets/Scripts/Player/SFKHookController.cs" />
+    <Compile Include="Assets/Scripts/Pipe/SFKRotatePipe.cs" />
+    <Compile Include="Assets/Scripts/Boss2/SFKBoss2Controller.cs" />
+    <Compile Include="Assets/Scripts/SFKWallController.cs" />
+    <Compile Include="Assets/Scripts/Boss2/SFKBoss2BulletController.cs" />
+    <Compile Include="Assets/Scripts/Key/SFKPlayerFollower.cs" />
+    <Compile Include="Assets/Scripts/Boss1/SFKBoss1Controller.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

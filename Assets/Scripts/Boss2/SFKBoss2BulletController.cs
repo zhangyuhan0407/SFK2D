@@ -11,7 +11,7 @@ public class SFKBoss2BulletController : MonoBehaviour
     void Start()
     {
         //dir = new Vector2(-3f,0);
-        Invoke("Shot", 1);
+        Invoke("Shot", 0.1f);
     }
 
     // Update is called once per frame

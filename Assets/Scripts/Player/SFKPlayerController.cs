@@ -5,12 +5,19 @@ using UnityEngine;
 public class SFKPlayerController : MonoBehaviour
 {
 
+    public enum PlayerFaceDirection
+    {
+        Right,
+        Left
+    }
+
     public enum PlayerState
     {
         Idle,
         OneHook,
         TwoHook,
     }
+
 
     public Rigidbody2D rb;
     public Camera m_Camera;
@@ -19,15 +26,15 @@ public class SFKPlayerController : MonoBehaviour
     public GameObject hook2;
 
 
+    LineRenderer liner1;
+    LineRenderer liner2;
 
-    LineRenderer liner;
-    public int currentPoint;
-
+    public PlayerFaceDirection direction;
 
     public PlayerState state;
 
-
     public GameObject destObj;
+
     private Vector2 dest;
 
 
@@ -36,15 +43,24 @@ public class SFKPlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        liner = GetComponent<LineRenderer>();
-        liner.material = new Material(Shader.Find("Standard"));
-        liner.positionCount = 2;
-        liner.startWidth = liner.endWidth = 0.1f;
-        liner.material.SetColor("_Color", Color.white);
-        currentPoint = 0;
+        liner1 = GetComponent<LineRenderer>();
+        liner1.material = new Material(Shader.Find("Standard"));
+        liner1.positionCount = 2;
+        liner1.startWidth = liner1.endWidth = 0.1f;
+        liner1.material.SetColor("_Color", Color.white);
 
-        hook1 = Instantiate(Resources.Load("Hook")) as GameObject;
-        hook2 = Instantiate(Resources.Load("Hook")) as GameObject;
+        liner2 = GetComponent<LineRenderer>();
+        liner2.material = new Material(Shader.Find("Standard"));
+        liner2.positionCount = 2;
+        liner2.startWidth = liner2.endWidth = 0.1f;
+        liner2.material.SetColor("_Color", Color.white);
+
+
+        direction = PlayerFaceDirection.Right;
+
+
+        hook1 = Instantiate(Resources.Load("Prefabs/Hook")) as GameObject;
+        hook2 = Instantiate(Resources.Load("Prefabs/Hook")) as GameObject;
         hook1.name = "Hook1";
         hook2.name = "Hook2";
         EnterState(PlayerState.Idle);
@@ -54,11 +70,25 @@ public class SFKPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
+        float h = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(h, 0) * 4;
+
+        if(h < 0)
+        {
+            direction = PlayerFaceDirection.Left;
+        }
+        else if (h > 0)
+        {
+            direction = PlayerFaceDirection.Right;
+        }
+
+
         if (state == PlayerState.OneHook)
         {
-            liner.SetPosition(0, transform.position);
-            liner.SetPosition(1, hook1.transform.position);
+            liner1.SetPosition(0, transform.position);
+            liner1.SetPosition(1, hook1.transform.position);
 
             dest = hook1.transform.position;
             destObj.transform.position = dest;
@@ -147,8 +177,8 @@ public class SFKPlayerController : MonoBehaviour
                 hook1.transform.position = hit.point;
                 hook1.transform.SetParent(hit.collider.transform);
 
-                liner.SetPosition(0, transform.position);
-                liner.SetPosition(1, hook1.transform.position);
+                liner1.SetPosition(0, transform.position);
+                liner1.SetPosition(1, hook1.transform.position);
 
                 HandleDest(hook1.transform.position);
 
@@ -221,6 +251,28 @@ public class SFKPlayerController : MonoBehaviour
         destObj.transform.position = dest;
         destObj.SetActive(a != Vector2.zero);
     }
+
+
+
+    public void HandleHoo2()
+    {
+
+        liner1.SetPosition(0, transform.position);
+        liner1.SetPosition(1, hook1.transform.position);
+
+        liner2.SetPosition(0, transform.position);
+        liner2.SetPosition(1, hook2.transform.position);
+
+
+        Vector3 dir1 = hook1.transform.position - transform.position;
+        Vector3 dir2 = hook1.transform.position - transform.position;
+        Vector3 dir = (dir1 + dir2) + transform.position;
+
+
+        rb.velocity = dir;
+    }
+
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)
