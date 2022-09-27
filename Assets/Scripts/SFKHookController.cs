@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HKHookController : MonoBehaviour
+public class SFKHookController : MonoBehaviour
 {
 
     public enum HookState
@@ -17,7 +17,7 @@ public class HKHookController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //EnterState(HookState.Idle);
+        
     }
 
     // Update is called once per frame
