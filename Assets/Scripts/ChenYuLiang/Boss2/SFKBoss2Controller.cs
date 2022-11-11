@@ -65,13 +65,13 @@ public partial class SFKBoss2Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            EnterState(SFKState.Shotting);
-        }
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    EnterState(SFKState.Shotting);
+        //}
 
         
-            return;
+        //    return;
 
         cdNormalAttack -= Time.deltaTime;
         cdRush -= Time.deltaTime;
