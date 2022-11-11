@@ -11,6 +11,7 @@ public class STGEnemy : MonoBehaviour
     void Start()
     {
         hp = 1;
+        
     }
 
     // Update is called once per frame
