@@ -56,28 +56,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/STG/STGEnemy.cs" />
+    <Compile Include="Assets/Scripts/STG/STGBullet_Enemy.cs" />
+    <Compile Include="Assets/Scripts/STG/STGEnemy_Move.cs" />
     <Compile Include="Assets/Scripts/STG/Weapons/STGRifle.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/Boss2/SFKBoss2Controller_Handler.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/Player/SFKPlayerController.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/Boss1/SFKBoss1Controller.cs" />
+    <Compile Include="Assets/Scripts/STG/STGEnemy_RangeAttack.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/SFKWipe.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/Player/SFKHookController.cs" />
+    <Compile Include="Assets/Scripts/STG/STGPortal.cs" />
+    <Compile Include="Assets/Scripts/STG/Weapons/STGShotGun.cs" />
     <Compile Include="Assets/Scripts/STG/STGPlayerController.cs" />
+    <Compile Include="Assets/Scripts/STG/STGGameManager.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/Pipe/SFKRotatePipe.cs" />
     <Compile Include="Assets/Scripts/STG/STGBullet.cs" />
     <Compile Include="Assets/Scripts/STG/Weapons/STGPistol.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/Boss2/SFKBoss2Controller.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/SFKWallController.cs" />
     <Compile Include="Assets/Scripts/ChenYuLiang/Key/SFKPlayerFollower.cs" />
-    <Compile Include="Assets/Scripts/ChenYuLiang/Boss2/SFKBoss2BulletController.cs" />
-    <Compile Include="Assets/Scripts/STG/Weapons/STGShotGun.cs" />
-    <Compile Include="Assets/Scripts/STG/STGEnemy_Move.cs" />
-    <Compile Include="Assets/Scripts/STG/STGEnemy_RangeAttack.cs" />
-    <Compile Include="Assets/Scripts/STG/STGBullet_Enemy.cs" />
-    <Compile Include="Assets/Scripts/STG/STGPortal.cs" />
-    <Compile Include="Assets/Scripts/STG/STGGameManager.cs" />
-    <Compile Include="Assets/Scripts/STG/STGItem.cs" />
     <Compile Include="Assets/Scripts/STG/STGLevel.cs" />
+    <Compile Include="Assets/Scripts/STG/STGItem.cs" />
+    <Compile Include="Assets/Scripts/ChenYuLiang/Boss2/SFKBoss2BulletController.cs" />
+    <Compile Include="Assets/Scripts/STG/Weapons/STGFist.cs" />
+    <Compile Include="Assets/Scripts/STG/STGBulletFist.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

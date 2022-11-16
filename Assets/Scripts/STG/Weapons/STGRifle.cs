@@ -11,7 +11,7 @@ public class STGRifle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prefabBullet = Resources.Load<GameObject>("Prefabs/STG/Bullet");
+        prefabBullet = Resources.Load<GameObject>("Prefabs/STG/Bullets/Bullet");
         cd = 0;
     }
 
@@ -52,6 +52,6 @@ public class STGRifle : MonoBehaviour
         {
             dir = new Vector2(-1, 0);
         }
-        bullet.GetComponent<Rigidbody2D>().velocity = dir * 3;
+        bullet.GetComponent<Rigidbody2D>().velocity = dir * 8;
     }
 }

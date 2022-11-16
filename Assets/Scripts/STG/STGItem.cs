@@ -8,6 +8,7 @@ public enum STGWeaponType
     Pistol,
     Rifle,
     Shotgun,
+    Fist,
 }
 
 
@@ -45,6 +46,9 @@ public class STGItem : MonoBehaviour
                     break;
                 case STGWeaponType.Shotgun:
                     collision.gameObject.AddComponent<STGShotGun>();
+                    break;
+                case STGWeaponType.Fist:
+                    collision.gameObject.AddComponent<STGFist>();
                     break;
             }
 

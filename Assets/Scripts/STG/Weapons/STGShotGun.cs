@@ -11,7 +11,7 @@ public class STGShotGun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prefabBullet = Resources.Load<GameObject>("Prefabs/STG/Bullet");
+        prefabBullet = Resources.Load<GameObject>("Prefabs/STG/Bullets/BulletThrowingStar");
         cd = 0;
     }
 
@@ -44,10 +44,10 @@ public class STGShotGun : MonoBehaviour
         bullet4.transform.position = gameObject.transform.position;
 
 
-        bullet1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1) * 3;
-        bullet2.GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0) * 3;
-        bullet3.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1) * 3;
-        bullet4.GetComponent<Rigidbody2D>().velocity = new Vector2(-1, 0) * 3;
+        bullet1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1) * 8;
+        bullet2.GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0) * 8;
+        bullet3.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1) * 8;
+        bullet4.GetComponent<Rigidbody2D>().velocity = new Vector2(-1, 0) * 8;
 
     }
 
