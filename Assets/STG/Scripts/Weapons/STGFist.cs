@@ -11,7 +11,7 @@ public class STGFist : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prefabBullet = Resources.Load<GameObject>("Prefabs/STG/Bullets/BulletFist");
+        prefabBullet = Resources.Load<GameObject>("Prefabs/Bullets/BulletFist");
     }
 
 

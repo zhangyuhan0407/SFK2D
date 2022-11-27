@@ -17,7 +17,9 @@ public class STGBOSS : MonoBehaviour
     float cd1;
     float cd2;
     float cd3;
+    float cdMove = 2;
 
+    Rigidbody2D rig;
 
     GameObject player;
     public GameObject prefabSkill1;
@@ -30,10 +32,12 @@ public class STGBOSS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rig = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         cd1 = 1000;
         cd2 = 10000;
         cd3 = 1;
+        cdMove = 0;
     }
 
     // Update is called once per frame
@@ -42,6 +46,7 @@ public class STGBOSS : MonoBehaviour
         cd1 -= Time.deltaTime;
         cd2 -= Time.deltaTime;
         cd3 -= Time.deltaTime;
+        cdMove -= Time.deltaTime;
 
         if(cd1 < 0)
         {
@@ -64,16 +69,23 @@ public class STGBOSS : MonoBehaviour
             return;
         }
 
-
-        Move();
-
+        if(cdMove < 0)
+        {
+            cdMove = 2f;
+            Move();
+        }
+        
+        
     }
 
 
 
     void Move()
     {
-    
+        float x = Random.Range(-10f,10f);
+        float y = Random.Range(-10f, 10f);
+        Vector2 dir = new Vector2(x, y);
+        rig.velocity = dir.normalized * 3f;
     }
 
 
@@ -81,8 +93,6 @@ public class STGBOSS : MonoBehaviour
     {
         GameObject skill1 = Instantiate(prefabSkill1);
         skill1.transform.position = player.transform.position;
-
-
     }
 
 

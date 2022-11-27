@@ -13,7 +13,7 @@ public class STGEnemy_RangeAttack : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        prefabBullet = Resources.Load<GameObject>("Prefabs/STG/Bullets/BulletEnemy");
+        prefabBullet = Resources.Load<GameObject>("Prefabs/Bullets/BulletEnemy");
         cd = 0;
     }
 

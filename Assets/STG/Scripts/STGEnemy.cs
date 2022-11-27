@@ -11,19 +11,18 @@ public class STGEnemy : MonoBehaviour
     void Start()
     {
         hp = 1;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void DecreaseHP(int value)
     {
         hp -= value;
-        if(hp<=0)
+        if (hp <= 0)
         {
             Destroy(gameObject);
         }
