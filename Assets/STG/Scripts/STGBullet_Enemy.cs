@@ -24,4 +24,9 @@ public class STGBullet_Enemy : MonoBehaviour
         }
 
     }
+
+    public void OnClearRoom()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -23,7 +23,7 @@ public class STGFist : MonoBehaviour
         {
             if (cd <= 0)
             {
-                cd = 0.1f;
+                cd = 1.0f;
                 Shot();
             }
         }
@@ -55,15 +55,13 @@ public class STGFist : MonoBehaviour
             {
                 dir.y = 1;
             }
-
-            //dir = (enemys[0].transform.position - transform.position).normalized;
         }
         else
         {
             dir = new Vector2(-1, 0);
         }
 
-        bullet.transform.position += dir;
+        //bullet.transform.position += dir;
     }
 
 

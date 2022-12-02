@@ -30,7 +30,12 @@ public class STGSliderEnemyHP : MonoBehaviour
 
     public void SetValue(int value, int max)
     {
-        sliderHP.value = (float)value / (float)max;
         gameObject.SetActive(true);
+        sliderHP.value = (float)value / (float)max;
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }
