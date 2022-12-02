@@ -57,10 +57,7 @@ public class STGItem : MonoBehaviour
                 Destroy(item.gameObject);
             }
 
-            STGGameManager.Instance.OpenPortal();
-
-            //GameObject prefab = Resources.Load<GameObject>("Prefabs/STG/" + key);
-            //GameObject obj = Instantiate(prefab);
+            STGGameManager.Instance.GameOver();
         }
     }
 }

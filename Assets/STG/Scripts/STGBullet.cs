@@ -31,4 +31,9 @@ public class STGBullet : MonoBehaviour
     }
 
 
+    public void OnClearRoom()
+    {
+        Destroy(gameObject);
+    }
+
 }

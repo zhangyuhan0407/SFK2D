@@ -50,7 +50,7 @@ public class STGPortal : MonoBehaviour
             
             GameObject prefab = Resources.Load<GameObject>("Prefabs/Levels/" + key);
             GameObject obj = Instantiate(prefab);
-            STGGameManager.Instance.level = obj.GetComponent<STGLevel>();
+            STGGameManager.Instance.SetLevel(obj.GetComponent<STGLevel>());
             STGGameManager.Instance.ClosePortal();
         }
 

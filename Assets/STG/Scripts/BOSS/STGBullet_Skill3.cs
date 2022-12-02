@@ -46,7 +46,11 @@ public class STGBullet_Skill3 : MonoBehaviour
 
     void Attack()
     {
-        boss.GetComponent<STGBOSS>().hp += 5;
+        if(boss == null)
+        {
+            return;
+        }
+        boss.GetComponent<STGEnemy>().hp += 5;
     }
 
 }
