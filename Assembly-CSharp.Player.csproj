@@ -57,10 +57,15 @@
   <ItemGroup>
     <Compile Include="Assets/STG/Scripts/STGBulletFist.cs" />
     <Compile Include="Assets/STG/Scripts/Weapons/STGFist.cs" />
+    <Compile Include="Assets/STG/Scripts/BOSS/STGBullet_Skill2.cs" />
     <Compile Include="Assets/STG/Scripts/STGEnemy.cs" />
+    <Compile Include="Assets/RPG/SFKItem.cs" />
+    <Compile Include="Assets/STG/Scripts/BOSS/STGBullet_Skill3.cs" />
     <Compile Include="Assets/STG/Scripts/STGBullet_Enemy.cs" />
     <Compile Include="Assets/STG/Scripts/STGEnemy_Move.cs" />
+    <Compile Include="Assets/STG/Scripts/BOSS/STGBullet_Lazer.cs" />
     <Compile Include="Assets/STG/Scripts/Weapons/STGRifle.cs" />
+    <Compile Include="Assets/STG/Scripts/STGHurtPlayer.cs" />
     <Compile Include="Assets/Hook/Scripts/Boss2/SFKBoss2Controller_Handler.cs" />
     <Compile Include="Assets/Hook/Scripts/Player/SFKPlayerController.cs" />
     <Compile Include="Assets/Hook/Scripts/Boss1/SFKBoss1Controller.cs" />
@@ -68,24 +73,23 @@
     <Compile Include="Assets/Hook/Scripts/SFKWipe.cs" />
     <Compile Include="Assets/Hook/Scripts/Player/SFKHookController.cs" />
     <Compile Include="Assets/STG/Scripts/STGPortal.cs" />
+    <Compile Include="Assets/STG/Scripts/BOSS/STGBOSS.cs" />
     <Compile Include="Assets/STG/Scripts/Weapons/STGShotGun.cs" />
     <Compile Include="Assets/STG/Scripts/STGPlayerController.cs" />
+    <Compile Include="Assets/STG/Scripts/BOSS/STGBullet_Skill1.cs" />
     <Compile Include="Assets/STG/Scripts/STGGameManager.cs" />
     <Compile Include="Assets/Hook/Scripts/Pipe/SFKRotatePipe.cs" />
     <Compile Include="Assets/STG/Scripts/STGBullet.cs" />
+    <Compile Include="Assets/RPG/SFKBagController.cs" />
     <Compile Include="Assets/STG/Scripts/Weapons/STGPistol.cs" />
     <Compile Include="Assets/Hook/Scripts/Boss2/SFKBoss2Controller.cs" />
     <Compile Include="Assets/Hook/Scripts/SFKWallController.cs" />
     <Compile Include="Assets/Hook/Scripts/Key/SFKPlayerFollower.cs" />
     <Compile Include="Assets/STG/Scripts/STGLevel.cs" />
     <Compile Include="Assets/STG/Scripts/STGItem.cs" />
+    <Compile Include="Assets/RPG/SFKSlot.cs" />
     <Compile Include="Assets/Hook/Scripts/Boss2/SFKBoss2BulletController.cs" />
-    <Compile Include="Assets/STG/Scripts/BOSS/STGBOSS.cs" />
-    <Compile Include="Assets/STG/Scripts/BOSS/STGBullet_Skill1.cs" />
-    <Compile Include="Assets/STG/Scripts/STGHurtPlayer.cs" />
-    <Compile Include="Assets/STG/Scripts/BOSS/STGBullet_Skill2.cs" />
-    <Compile Include="Assets/STG/Scripts/BOSS/STGBullet_Skill3.cs" />
-    <Compile Include="Assets/STG/Scripts/BOSS/STGBullet_Lazer.cs" />
+    <Compile Include="Assets/STG/Scripts/STGSliderEnemyHP.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

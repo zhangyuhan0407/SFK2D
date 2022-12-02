@@ -29,7 +29,6 @@ public class STGGameManager : MonoBehaviour
     {
         if (level.type == STGLevelType.Fight)
         {
-            Debug.Log("GameOver");
             STGEnemy enemy = FindObjectOfType<STGEnemy>();
             if (enemy == null)
             {

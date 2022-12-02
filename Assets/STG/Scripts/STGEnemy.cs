@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class STGEnemy : MonoBehaviour
 {
-
-    int hp;
+    public int maxHP;
+    public int hp;
 
     // Start is called before the first frame update
     void Start()
     {
-        hp = 1;
+        if(maxHP == 0)
+        {
+            maxHP = 3;
+            hp = 3;
+        }
     }
 
     // Update is called once per frame
@@ -22,6 +26,7 @@ public class STGEnemy : MonoBehaviour
     public void DecreaseHP(int value)
     {
         hp -= value;
+        STGSliderEnemyHP.Instance.SetValue(hp, maxHP);
         if (hp <= 0)
         {
             Destroy(gameObject);
